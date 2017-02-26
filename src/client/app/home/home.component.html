@@ -49,7 +49,7 @@
       <h3 class="add-entry">Add an Entry</h3>
     </div>
   </div>
-  <form>
+  <form id="edit-form">
     <div class="form-group">
       <label for="type">Type</label>
       <input [(ngModel)]="type" id="type" type="text" name="type" class="form-control">
@@ -78,6 +78,6 @@
       <label>Email</label>
       <input [(ngModel)]="email" type="text" name="email" class="form-control">
     </div>
-    <button type="submit" class="btn btn-primary" (click)="addEntry();">Add Entry</button>
+    <button type="submit" class="btn btn-primary" (click)="addEntry($event);">Add Entry</button>
   </form>
 </div>
