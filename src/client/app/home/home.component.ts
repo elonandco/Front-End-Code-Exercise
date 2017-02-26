@@ -66,10 +66,10 @@ export class HomeComponent implements OnInit {
   /**
    * Adds an entry to the contact list
    */
-  addEntry() {
+  addEntry(e) {
     let contact = new Contact(this.type, this.name, this.title, this.phone, this.ext, this.fax, this.email);
     this.contacts.push(contact);
-    this.contactService.add(this.contacts);
+    this.contactService.add(this.contacts,e.currentTarget);
   }
 
 }
