@@ -55,9 +55,8 @@ export class ContactService {
                     .catch(this.handleError);
   }
 
-  add(contacts: Contact[], elem) {
+  add(contacts: Contact[]) {
     localStorage.setItem(this.localStorageKey, JSON.stringify(contacts));
-    $(elem).closest('#edit-form')[0].reset();
   }
 
   removeItems(contacts: Contact[]) {
@@ -85,3 +84,4 @@ export class ContactService {
     return Observable.throw(errMsg);
   }
 }
+
